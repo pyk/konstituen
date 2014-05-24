@@ -31,13 +31,13 @@ app.controller("BeritaCtrl",
   function ($s,$h) {
     $s.getBerita = function () {
     var key = "40381f1d8123102fd74d85aef44d70d5";
-    var url = "http://api.pemiluapi.org/berita";
+    var url = "http://beritaapi.apiary-mock.com/berita";
     $h.get(url, {params: {json: "get_recent_posts", apiKey: key, callback: "JSON_CALLBACK"}})
       .success(function (data,status, header, config) {
         console.log(data);
       })
       .error(function (data,status,header,config) {
-        console.log("error")
+        console.log("error");
       });
   };
   $s.getBerita();
