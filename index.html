@@ -9,6 +9,7 @@
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="assets/css/main.css">
         <script src="assets/libs/angular.min.js"></script>
+        <script src="assets/libs/angular-resource.min.js"></script>
         <script src="assets/libs/angular-route.min.js"></script>
         <script src="assets/libs/loading-bar.min.js"></script>
         <script src="assets/js/app.js"></script>
@@ -39,7 +40,7 @@
 
         <!-- <p class="navigation-error" ng-hide="navigationError">Maaf, perangkat anda tidak mendukung Geolocation API. Gunakan smartphone Android anda.</p> -->
         <!-- loadig bar -->
-        <section id="loading-wrapper">
+        <section id="loading-wrapper" ng-hide="hideLoader">
             <div id="top" class="mask">
               <div class="element"></div>
             </div>
@@ -48,7 +49,20 @@
             </div>
         </section>
 
-        <div ng-view></div>
+        <div class="container" ng-hide="!hideLoader">
+            <div class="row navbar">
+                <div id="logo">
+                    <a href="/#/beranda"><img src="assets/images/konstituen72x72.png"></a>
+                </div>
+                <div id="menu">
+                    <ul>
+                        <li><a href="#">Berita</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div ng-view></div>
+        </div>
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

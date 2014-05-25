@@ -1,2 +1,8 @@
-<div ng-hide="display" ng-controller="BeritaCtrl">
+<div class="row" ng-hide="display" ng-controller="BeritaCtrl">
+   <div ng-repeat="post in data.posts" class="post">
+        <div class="cover">
+            <a href="{{post.url}}"><img src="assets/images/berita/{{post.id}}.jpg"></a>
+        </div>
+        <span class="title"><a href="{{ post.url }}"> {{post.title}}</a></span>
+   </div>
 </div>

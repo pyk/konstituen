@@ -780,29 +780,6 @@ h6,
     background: blue;
   }
 }
-.notification {
-  background-color: #F9F9F9;
-}
-.message {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 480px) {
-  .message {
-    float: left;
-    width: 300%;
-  }
-}
-.message p {
-  color: #8C989E;
-  vertical-align: baseline;
-}
-.message p strong {
-  margin-right: 10px;
-  color: #C00;
-}
 .navbar .container .row {
   padding: 25px 0;
 }
@@ -1197,10 +1174,6 @@ html {
   color: #fff;
   margin-top: 50px;
 }
-.content {
-  background: #fff;
-  margin-top: 420px;
-}
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -1227,4 +1200,75 @@ html {
 }
 .row:after {
   clear: both;
+}
+.navbar {
+  line-height: 75px;
+}
+#logo {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 480px) {
+  #logo {
+    float: left;
+    width: 15%;
+  }
+}
+#logo a > img {
+  height: 42px;
+  vertical-align: middle;
+}
+#menu {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 480px) {
+  #menu {
+    float: left;
+    width: 85%;
+  }
+}
+#menu > ul {
+  margin: 0;
+  padding-left: 0;
+}
+#menu > ul > li {
+  display: inline;
+}
+#menu > ul > li > a {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.cover {
+  max-height: 372px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+span.title {
+  border-left: 4px solid red;
+  position: relative;
+  padding: 0px 15px;
+  font-size: 21px;
+  background-color: #1c2126;
+  line-height: 44px;
+  height: 44px;
+  font-weight: 600;
+  box-sizing: border-box;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 95%;
+}
+span.title > a {
+  color: #fff;
+  text-decoration: none;
 }
